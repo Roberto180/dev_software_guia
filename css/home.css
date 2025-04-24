@@ -1,0 +1,655 @@
+/* Remove margens e paddings padrão de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui padding e bordas no tamanho total do elemento */
+}
+
+/* Garante que o body e o html ocupem 100% da altura da tela */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Alinha os elementos em coluna */
+}
+    
+/* Estiliza links */
+a {
+    font-family: sans-serif;
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+
+.searchbar {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.searchbar .search {
+    border: none; /* Remove borda */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    width: 300px; /* Largura fixa */
+    border-right-color: transparent; /* Torna a borda direita invisível */
+    border-radius: 10px 0 0 10px; /* Bordas arredondadas apenas no lado esquerdo */
+}
+
+.searchbar .buscar{
+    background: #9d4edd; /* Cor de fundo */
+    border: none; /* Remove borda */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    border-left-color: transparent; /* Torna a borda direita invisível */
+    border-radius: 0 10px 10px 0; /* Bordas arredondadas apenas no lado esquerdo */
+}
+
+.searchbar .buscar:hover{
+    background: linear-gradient(to left, #9d4edd, #d2923f); /* Cor de fundo ao passar o mouse */
+}
+
+.searchbar .search:hover{
+    background: white; /* Cor de fundo ao passar o mouse */
+    transition: 0.5s; /* Animação suave */
+    padding: 15px;
+}
+
+/* Define o fundo da seção container */
+.container {
+    display: flex; 
+    flex-wrap: wrap; /* Permite quebra de linha */
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5vw 5vw 30rem; /* Margens ao redor */
+    margin-top: 10px;
+    flex: box;
+    position: relative;
+}
+
+/* Estiliza os itens dentro do container */
+.item1, .item2, .item3 {
+    background: linear-gradient(to left, #9d4edd,#d2923f); /* Gradiente no fundo */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    margin: 100px 0; /* Margem ao redor */
+    color: white;
+    font-size: 20px;
+    transition: 2s ease; /* Animação suave */
+    cursor: pointer;
+    width: 350px;
+    height: 400px;
+    max-width: 450vw;
+    max-height: 450vw;
+}
+
+.containerbox {
+    display: flex; 
+    flex-wrap: nowrap; /* Permite quebra de linha */
+    flex-direction: row;
+    justify-content: center;
+    margin: 5vw 5vw; /* Margens ao redor */
+    margin-top: 10px;
+    flex: box;
+    position: relative;
+}
+
+.box1, .box2 {
+    background: #9d4edd; /* Gradiente no fundo */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    margin: 100px 20px; /* Margem ao redor */
+    color: white;
+    font-size: 10px;
+    transition: 2s ease; /* Animação suave */
+    width: 500vw;
+    height: 600px;
+    max-width: 450vw;
+    max-height: 450vw;
+}
+
+/* Aplica o blur nos itens que não estão sendo "hovered" */
+.container:hover > *:not(:hover) {
+    filter: blur(5px); /* Aplica o desfoque */
+    opacity: 0.5; /* Reduz a opacidade */
+    transition: 0.3s ease; /* Animação suave */
+}
+
+/* Remove o blur e destaca o item que está sendo "hovered" */
+.container > *:hover {
+    filter: none; /* Remove o desfoque */
+    opacity: 1; /* Restaura a opacidade */
+    transform: scale(1.05); /* Aumenta levemente o tamanho */
+    transition: 0.3s ease; /* Animação suave */
+}
+
+/* Estiliza o cabeçalho */
+.header {
+    background: #10002b;
+    padding-inline: 16px; /* Espaçamento horizontal */
+}
+
+/* Configura o layout do menu de navegação */
+.nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto; /* Centraliza horizontalmente */
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Define o comportamento do logo */
+.logo {
+    flex: 1; /* Ocupa o espaço restante */
+    transform: translateX(-75%);
+    position: relative;
+}
+
+/* Estiliza a lista de navegação */
+.nav-list {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os itens */
+    list-style: none; /* Remove os marcadores da lista */
+    position: absolute;
+    left:40%;
+    transform: translateX(-50%); /* Centraliza a lista */
+}
+
+/* Estiliza os links da navegação */
+.nav-list a {
+    font-size: 18px;
+    color: white;
+    padding-block: 16px; /* Espaçamento vertical */
+    text-align: center;
+    transition: 0.5s; /* Animação suave */
+    border-radius: 25px;
+    padding: 10px 25px; /* Espaçamento interno */
+}
+
+/* Estiliza o efeito hover nos links da navegação */
+nav a:hover {
+    background: linear-gradient(to left, #10002b, #9d4edd, #d2923f); /* Gradiente no fundo */
+    transition: 0.5s; /* Animação suave */
+    cursor: pointer;
+    padding: 20px; /* Aumenta o espaçamento ao passar o mouse */
+    color: white; /* Cor do texto */
+}
+
+/* Define a altura da seção hero */
+.hero {
+    height: calc(100vh - 70px); /* Altura total da tela menos o cabeçalho */
+}
+
+/* Configura o fundo da imagem principal */
+.fundo-img {
+    background: center / cover no-repeat url(../image/fundo.jpg); /* Imagem centralizada e coberta */
+    flex: 1;
+    background-attachment: scroll; /* Fundo não fixo */
+    display: flex;
+    position: fixed; /* Fixa o fundo na tela */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura */
+    height: 100%; /* Ocupa toda a altura */
+    background: center / cover no-repeat url(../image/fundo.jpg); /* Centraliza e cobre a tela */
+    z-index: -1; /* Coloca o fundo atrás de todos os outros elementos */
+    filter: blur(2px); /* Aplica um desfoque ao fundo */
+}
+
+/* Configura o layout flexível da seção flex-container */
+.flex-container {
+    background-color: #9d4edd;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: center; /* Centraliza os itens */
+    margin: 5rem; /* Margem ao redor */
+}
+
+/* Define o tamanho dos elementos dentro do flex-container */
+.flex-container div {
+    height: 200px;
+    width: 250px;
+}
+
+/* Estiliza o rodapé */
+.final {
+    background: #10002b;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%; /* Ocupa toda a largura */
+}
+
+/* Estiliza a lista do rodapé */
+.final-list {
+    font-size: 18px;
+    color: white;
+    padding: 15px 25px; /* Espaçamento interno */
+    text-decoration: none; /* Remove sublinhado */
+    list-style: none; /* Remove marcadores */
+    display: flex;
+    gap: 20px; /* Espaçamento entre itens */
+    margin: 0; /* Remove margens */
+}
+
+/* Estiliza os botões do rodapé */
+button.botao {
+    background: transparent; /* Fundo transparente */
+    border: none; /* Remove bordas */
+    color: white;
+    cursor: pointer; /* Mostra o cursor de clique */
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* Estiliza as mensagens ocultas */
+.mensagem {
+    margin: 30px auto;
+    max-width: 600px;
+    opacity: 0; /* Invisível por padrão */
+    max-height: 0; /* Altura zero por padrão */
+    overflow: hidden; /* Esconde conteúdo excedente */
+    transition: all 0.5s ease; /* Animação suave */
+    bottom: 40px;
+    left: 50%;
+}
+
+/* Estiliza as mensagens quando ativas */
+.mensagem.ativa {
+    color: white;
+    opacity: 1; /* Torna visível */
+    max-height: 100px; /* Define altura máxima */
+    padding: 15px; /* Espaçamento interno */
+    background: linear-gradient(to left, #10002b, #9d4edd, #d2923f); /* Fundo com gradiente */
+    border-radius: 15px; /* Bordas arredondadas */
+}
+    /*Fim code Home*/
+    /*Começo code Carreira*/
+ul {
+    display: flex;
+    justify-content:space-between ;
+    list-style-type: none;
+    align-items: center;
+    padding: 16px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+.center {
+    text-align: center;
+}
+h1 {
+    color: #1b4f9c;
+    text-align: center;
+}
+h2 {
+    color: white;
+    text-align: center;
+}
+header{
+    text-align: center;
+}
+footer {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    padding: 0px 50px;
+}
+.containerA {
+    display: flex;
+    justify-content: center;
+    gap: 9rem;
+}
+nav a:hover {
+    color: #10002b;
+}
+h5 {
+    text-align: center;
+}
+.br {
+    background-color: #7b42dd;
+    border-radius: 5px;
+    background-size: 50px;
+}
+.items img {
+    border-radius: 10px;
+    height: auto;
+    width: 300px;
+}
+.items {
+    border-radius: 10px;
+    background-color: #1b4f9c;
+    background-size: auto;
+    width: 300px;
+    height: 65vh;
+    text-align: center;
+}
+.items p {
+    padding-top: 5rem;
+}
+
+.slider{
+    margin: 4rem auto;
+    width: 1800px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+.slides input {
+    display: none;
+}
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+.slide img {
+    width: 1800px;
+}
+.manual-navigation {
+    position: absolute;
+    width: 62%;
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+.manual-btn:hover {
+    background-color: #10002b;
+}
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+#radio2:checked ~ .first {
+    margin-left: -25%;
+}
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
+#radio4:checked ~ .first {
+    margin-left: -75%;
+}
+.navigation-auto div {
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.navigation-auto {
+    position: absolute;
+    width: 62%;
+    margin-top: 465px;
+    display: flex;
+    justify-content: center;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: white;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: white;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: white;
+}
+
+/*timeline responsiva*/
+/*criação dos box*/
+.containerB {
+    background: #7b42dd;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 100px 15px;
+}
+.timeline {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+.timeline li {
+    padding: 20px;
+    background-color: #444;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.timeline li:last-child {
+    margin-bottom: 0;
+}
+.timeline .timeline-content h2 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.timeline .timeline-content p {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #fff;
+}
+.timeline .timeline-content .date {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.backA {
+    background: fixed;
+    margin: 5rem 5rem;
+    padding: 30px 0 10vw 0;
+    border-radius: 15px;
+}
+
+/* Timeline */
+
+
+.cd-container {
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+    background: #2B343A;
+    padding: 0 10%;
+    border-radius: 2px;
+  }
+  .cd-container::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  /* -------------------------------- 
+  
+  Main components 
+  
+  -------------------------------- */
+  
+  
+  #cd-timeline {
+    position: relative;
+    padding: 2em 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  #cd-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25px;
+    height: 100%;
+    width: 4px;
+    background: #7E57C2;
+  }
+  @media only screen and (min-width: 1170px) {
+    #cd-timeline {
+      margin-top: 3em;
+      margin-bottom: 3em;
+    }
+    #cd-timeline::before {
+      left: 50%;
+      margin-left: -2px;
+    }
+  }
+  
+  .cd-timeline-block {
+    position: relative;
+    margin: 2em 0;
+  }
+  .cd-timeline-block:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .cd-timeline-block:first-child {
+    margin-top: 0;
+  }
+  .cd-timeline-block:last-child {
+    margin-bottom: 0;
+  }
+  @media only screen and (min-width: 1170px) {
+    .cd-timeline-block {
+      margin: 4em 0;
+    }
+    .cd-timeline-block:first-child {
+      margin-top: 0;
+    }
+    .cd-timeline-block:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .cd-timeline-img {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #7E57C2, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  }
+  .cd-timeline-img {
+    background: #673AB7;
+  }
+  @media only screen and (min-width: 1170px) {
+    .cd-timeline-img {
+      width: 30px;
+      height: 30px;
+      left: 50%;
+      margin-left: -15px;
+      margin-top: 15px;
+      /* Force Hardware Acceleration in WebKit */
+      -webkit-transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+    }
+  }
+  
+  .cd-timeline-content {
+    position: relative;
+    margin-left: 60px;
+    margin-right: 30px;
+    background: #333C42;
+    border-radius: 2px;
+    padding: 1em;
+    .timeline-content-info {
+      background: #2B343A;
+      padding: 5px 10px;
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      box-shadow:  inset 0 2px 0 rgba(0, 0, 0, 0.08);
+      border-radius: 2px;
+      i {
+        margin-right: 5px;
+      }
+      .timeline-content-info-title, .timeline-content-info-date {  
+        width: calc(50% - 2px);
+        display: inline-block;
+      }
+      @media (max-width: 500px) {
+        .timeline-content-info-title, .timeline-content-info-date {  
+          display: block;
+          width:100%;
+        } 
+      }
+    }
+
+    .content-skills {
+      font-size: 12px;
+      padding:0;
+      margin-bottom: 0;
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      li {
+        background: #40484D;
+        border-radius: 2px;
+        display: inline-block;
+        padding: 2px 10px;
+        color: rgba(255,255,255,0.7);
+        margin: 3px 2px;
+        text-align: center;
+        flex-grow: 1;
+      }
+    }
+  }
+  .cd-timeline-content:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .cd-timeline-content h2 {
+    color: rgba(255,255,255,.9);
+    margin-top:0;
+    margin-bottom: 5px;
+  }
+  .cd-timeline-content p, .cd-timeline-content .cd-date {
+    color: rgba(255,255,255,.7);
+    font-size: 13px;
+    font-size: 0.8125rem;
+  }
+  .cd-timeline-content .cd-date {
+    display: inline-block;
+  }
+  .cd-timeline-content p {
+    margin: 1em 0;
+    line-height: 1.6;
+  }
+  
+  .cd-timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 100%;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-right: 7px solid #333C42;
+  }
