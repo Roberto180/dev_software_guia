@@ -1,5 +1,0 @@
-Digite no terminal de home.html a seguinte função:
-
-python -m http.server 8000
-
-Depois vá no arquivo .bat e acesse com o link deixado lá!
