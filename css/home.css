@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Inclui padding e bordas no tamanho total do elemento */
+    box-sizing: border-box; 
 }
 
 /* Garante que o body e o html ocupem 100% da altura da tela */
@@ -10,71 +10,135 @@ html, body {
     height: 100%;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Alinha os elementos em coluna */
+    flex-direction: column; 
+    scroll-behavior: smooth;
 }
     
+footer {
+    margin-top: auto;
+}
 /* Estiliza links */
 a {
     font-family: sans-serif;
-    text-decoration: none; /* Remove o sublinhado */
+    text-decoration: none; 
 }
 
-
 .searchbar {
-    display: flex; /* Ativa o Flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
+    display: flex; 
+    justify-content: center; 
 }
 
 .searchbar .search {
-    border: none; /* Remove borda */
-    padding: 10px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    width: 300px; /* Largura fixa */
-    border-right-color: transparent; /* Torna a borda direita invisível */
-    border-radius: 10px 0 0 10px; /* Bordas arredondadas apenas no lado esquerdo */
+    border: none; 
+    padding: 10px; 
+    font-size: 16px; 
+    width: 300px; 
+    border-right-color: transparent; 
+    border-radius: 10px 0 0 10px; 
 }
 
 .searchbar .buscar{
-    background: #9d4edd; /* Cor de fundo */
-    border: none; /* Remove borda */
-    color: white; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    border-left-color: transparent; /* Torna a borda direita invisível */
-    border-radius: 0 10px 10px 0; /* Bordas arredondadas apenas no lado esquerdo */
+    background: #9d4edd; 
+    border: none; 
+    color: white; 
+    padding: 10px 20px;
+    cursor: pointer; 
+    border-left-color: transparent; 
+    border-radius: 0 10px 10px 0;
 }
 
 .searchbar .buscar:hover{
-    background: linear-gradient(to left, #9d4edd, #d2923f); /* Cor de fundo ao passar o mouse */
+    background: linear-gradient(to left, #9d4edd); 
 }
 
 .searchbar .search:hover{
-    background: white; /* Cor de fundo ao passar o mouse */
-    transition: 0.5s; /* Animação suave */
+    background: white; 
+    transition: 0.5s; 
     padding: 15px;
 }
 
 /* Define o fundo da seção container */
 .container {
     display: flex; 
-    flex-wrap: wrap; /* Permite quebra de linha */
+    flex-wrap: wrap; 
     flex-direction: row;
     justify-content: space-between;
-    margin: 5vw 5vw 30rem; /* Margens ao redor */
+    margin: 5vw 3vw 10rem; 
     margin-top: 10px;
     flex: box;
     position: relative;
 }
 
+.parallax {
+    margin: 0;
+    padding: 0;
+    background-image: url(../image/topdms.png); 
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+  
+.parallax span {
+    z-index: 2;
+    font-size: 3rem;
+}
+
+.fundoajuda {
+    background: linear-gradient(60deg, #10002b 60%, #7b42dd);
+    margin: 0;
+    padding: 100px;
+}
+
+.backimgtop {
+    margin: 0;
+    padding: 0;
+    background-image: url(../image/topdms.png); 
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    .backimgtop div {
+        z-index: 2;
+        font-size: 3rem;
+    }
+}
+
+.backimgtop1 {
+    margin: 0;
+    padding: 5rem 0 70rem 0;
+    background-image: url(../image/topdms.png); 
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0, 0, 0, 0), transparent);
+    z-index: 1;
+}
+
 /* Estiliza os itens dentro do container */
 .item1, .item2, .item3 {
-    background: linear-gradient(to left, #9d4edd,#d2923f); /* Gradiente no fundo */
-    border-radius: 15px; /* Bordas arredondadas */
-    padding: 15px; /* Espaçamento interno */
-    margin: 100px 0; /* Margem ao redor */
+    background: linear-gradient(to left, #9d4edd,#070011);
+    border-radius: 15px; 
+    padding: 15px; 
+    margin: 100px 0; 
     color: white;
     font-size: 20px;
-    transition: 2s ease; /* Animação suave */
+    transition: 2s ease; 
     cursor: pointer;
     width: 350px;
     height: 400px;
@@ -84,23 +148,23 @@ a {
 
 .containerbox {
     display: flex; 
-    flex-wrap: nowrap; /* Permite quebra de linha */
+    flex-wrap: nowrap; 
     flex-direction: row;
     justify-content: center;
-    margin: 5vw 5vw; /* Margens ao redor */
+    margin: 5vw 5vw; 
     margin-top: 10px;
     flex: box;
     position: relative;
 }
 
 .box1, .box2 {
-    background: #9d4edd; /* Gradiente no fundo */
-    border-radius: 15px; /* Bordas arredondadas */
-    padding: 15px; /* Espaçamento interno */
-    margin: 100px 20px; /* Margem ao redor */
+    background: #9d4edd; 
+    border-radius: 15px; 
+    padding: 15px; 
+    margin: 100px 20px;
     color: white;
     font-size: 10px;
-    transition: 2s ease; /* Animação suave */
+    transition: 2s ease; 
     width: 500vw;
     height: 600px;
     max-width: 450vw;
@@ -109,30 +173,30 @@ a {
 
 /* Aplica o blur nos itens que não estão sendo "hovered" */
 .container:hover > *:not(:hover) {
-    filter: blur(5px); /* Aplica o desfoque */
-    opacity: 0.5; /* Reduz a opacidade */
-    transition: 0.3s ease; /* Animação suave */
+    filter: blur(5px); 
+    opacity: 0.5; 
+    transition: 0.3s ease;
 }
 
 /* Remove o blur e destaca o item que está sendo "hovered" */
 .container > *:hover {
-    filter: none; /* Remove o desfoque */
-    opacity: 1; /* Restaura a opacidade */
-    transform: scale(1.05); /* Aumenta levemente o tamanho */
-    transition: 0.3s ease; /* Animação suave */
+    filter: none; 
+    opacity: 1; 
+    transform: scale(1.05); 
+    transition: 0.3s ease; 
 }
 
 /* Estiliza o cabeçalho */
 .header {
     background: #10002b;
-    padding-inline: 16px; /* Espaçamento horizontal */
+    padding-inline: 16px; 
 }
 
 /* Configura o layout do menu de navegação */
 .nav {
     max-width: 1280px;
     height: 70px;
-    margin-inline: auto; /* Centraliza horizontalmente */
+    margin-inline: auto; 
     display: flex;
     align-items: center;
     position: relative;
@@ -140,110 +204,148 @@ a {
 
 /* Define o comportamento do logo */
 .logo {
-    flex: 1; /* Ocupa o espaço restante */
-    transform: translateX(-75%);
+    display: flex;
+    flex: 1; 
     position: relative;
 }
 
 /* Estiliza a lista de navegação */
 .nav-list {
     display: flex;
-    gap: 20px; /* Espaçamento entre os itens */
-    list-style: none; /* Remove os marcadores da lista */
+    gap: 20px; 
+    list-style: none; 
     position: absolute;
     left:40%;
-    transform: translateX(-50%); /* Centraliza a lista */
+    transform: translateX(-50%); 
 }
 
 /* Estiliza os links da navegação */
 .nav-list a {
     font-size: 18px;
     color: white;
-    padding-block: 16px; /* Espaçamento vertical */
+    padding-block: 16px; 
     text-align: center;
-    transition: 0.5s; /* Animação suave */
+    transition: 0.5s; 
     border-radius: 25px;
-    padding: 10px 25px; /* Espaçamento interno */
+    padding: 10px 25px; 
+}
+
+.nav-list a.active {
+    background: linear-gradient(to right, #10002b, #9d4edd);
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    transition: 0.3s ease;
 }
 
 /* Estiliza o efeito hover nos links da navegação */
 nav a:hover {
-    background: linear-gradient(to left, #10002b, #9d4edd, #d2923f); /* Gradiente no fundo */
-    transition: 0.5s; /* Animação suave */
+    background: linear-gradient(to left, #10002b, #9d4edd); 
+    transition: 0.5s; 
     cursor: pointer;
-    padding: 20px; /* Aumenta o espaçamento ao passar o mouse */
-    color: white; /* Cor do texto */
+    padding: 20px;
+    color: white; 
 }
 
 /* Define a altura da seção hero */
 .hero {
-    height: calc(100vh - 70px); /* Altura total da tela menos o cabeçalho */
+    height: calc(100vh - 70px);
 }
 
 /* Configura o fundo da imagem principal */
 .fundo-img {
-    background: center / cover no-repeat url(../image/fundo.jpg); /* Imagem centralizada e coberta */
+    background: center / cover no-repeat url(../image/fundo.jpg); 
     flex: 1;
-    background-attachment: scroll; /* Fundo não fixo */
+    background-attachment: scroll; 
     display: flex;
-    position: fixed; /* Fixa o fundo na tela */
+    position: fixed; 
     top: 0;
     left: 0;
-    width: 100%; /* Ocupa toda a largura */
-    height: 100%; /* Ocupa toda a altura */
-    background: center / cover no-repeat url(../image/fundo.jpg); /* Centraliza e cobre a tela */
-    z-index: -1; /* Coloca o fundo atrás de todos os outros elementos */
-    filter: blur(2px); /* Aplica um desfoque ao fundo */
+    width: 100%; 
+    height: 100%; 
+    z-index: -1; 
+    filter: blur(2px); 
 }
 
 /* Configura o layout flexível da seção flex-container */
 .flex-container {
-    background-color: #9d4edd;
+    background: linear-gradient(60deg, #10002b, #9d4edd);
     font-size: 20px;
     color: white;
     display: flex;
+    gap: 10px;
     text-align: center;
-    flex-wrap: wrap; /* Permite quebra de linha */
-    justify-content: center; /* Centraliza os itens */
-    margin: 5rem; /* Margem ao redor */
+    justify-content: space-between;
+    flex-direction:row;
+    flex-wrap: wrap;
+    padding: auto;
 }
-
-/* Define o tamanho dos elementos dentro do flex-container */
-.flex-container div {
-    height: 200px;
-    width: 250px;
+ .itens1, .itens2, .itens3, .itens4 {
+    background: #10002b;
+    max-width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 150px auto;
+        img {
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            color: white;
+            font-size: 20px;
+            margin: 10px 0;
+            text-align: center;
+        }
+}
+.itens p {
+    text-align: left;
+    padding: 10px ;
+    margin-inline:10px;
+    font-family: "Exposição Playfair";
+}
+.nome {
+    background-color: #7D4993;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 /* Estiliza o rodapé */
 .final {
     background: #10002b;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+    align-items: center; 
     text-align: center;
-    position: relative;
+    position:static;
     bottom: 0;
-    width: 100%; /* Ocupa toda a largura */
+    width: 100%;
 }
 
 /* Estiliza a lista do rodapé */
 .final-list {
     font-size: 18px;
     color: white;
-    padding: 15px 25px; /* Espaçamento interno */
-    text-decoration: none; /* Remove sublinhado */
-    list-style: none; /* Remove marcadores */
+    padding: 15px 25px; 
+    text-decoration: none; 
+    list-style: none;
     display: flex;
-    gap: 20px; /* Espaçamento entre itens */
-    margin: 0; /* Remove margens */
+    gap: 20px; 
+    margin: 0; 
 }
 
 /* Estiliza os botões do rodapé */
 button.botao {
-    background: transparent; /* Fundo transparente */
-    border: none; /* Remove bordas */
+    background: transparent; 
+    border: none;
     color: white;
-    cursor: pointer; /* Mostra o cursor de clique */
+    cursor: pointer; 
     font-size: 16px;
     margin-top: 15px;
 }
@@ -252,10 +354,10 @@ button.botao {
 .mensagem {
     margin: 30px auto;
     max-width: 600px;
-    opacity: 0; /* Invisível por padrão */
-    max-height: 0; /* Altura zero por padrão */
-    overflow: hidden; /* Esconde conteúdo excedente */
-    transition: all 0.5s ease; /* Animação suave */
+    opacity: 0; 
+    max-height: 0;
+    overflow: hidden; 
+    transition: all 0.5s ease; 
     bottom: 40px;
     left: 50%;
 }
@@ -263,14 +365,13 @@ button.botao {
 /* Estiliza as mensagens quando ativas */
 .mensagem.ativa {
     color: white;
-    opacity: 1; /* Torna visível */
-    max-height: 100px; /* Define altura máxima */
-    padding: 15px; /* Espaçamento interno */
-    background: linear-gradient(to left, #10002b, #9d4edd, #d2923f); /* Fundo com gradiente */
-    border-radius: 15px; /* Bordas arredondadas */
+    opacity: 1; 
+    max-height: 100px; 
+    padding: 15px; 
+    background: linear-gradient(to left, #10002b, #9d4edd); 
+    border-radius: 15px; 
 }
     /*Fim code Home*/
-    /*Começo code Carreira*/
 ul {
     display: flex;
     justify-content:space-between ;
@@ -284,6 +385,12 @@ a {
 }
 .center {
     text-align: center;
+    padding: 10px 0 10px 5vh;
+    margin: 50px 50px;
+    font-size: 20px;
+    background: linear-gradient(to right, #10002b, #9d4edd);
+    border-radius: 15px;
+    display: flexbox;
 }
 h1 {
     color: #1b4f9c;
@@ -305,10 +412,23 @@ footer {
 }
 .containerA {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5vw 3vw 10rem;
+    margin-top: 10px;
+    flex: box;
+    position: relative;
+    gap: 10px;
+    margin: 5vw 3vw 10rem;
+    padding: 100px 20px;
 }
-nav a:hover {
-    color: #10002b;
+
+.containerA > .items:hover {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.09); /* Aumenta o item levemente */
+    transition: 0.3s ease;
 }
 h5 {
     text-align: center;
@@ -320,21 +440,28 @@ h5 {
 }
 .items img {
     border-radius: 10px;
+    width: 100%;
     height: auto;
-    width: 250px;
+    margin-bottom: 10px;
 }
 .items {
+    height: 40rem;
+    width: 22rem;
     border-radius: 10px;
-    background-color: #1b4f9c;
-    background-size: auto;
-    width: 250px;
-    height: auto;
+    background: linear-gradient(to right, #10002b, #9d4edd);
     text-align: center;
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+    margin: auto;
+}
+.items p {
+    color: white;
+    font-size: 14px;
+    margin: 10px 0;
 }
 .slider{
     margin: 4rem auto;
-    width: 800px;
-    height: 450px;
+    width: 1300px;
+    height: 500px;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -352,12 +479,12 @@ h5 {
     transition: 2s;
 }
 .slide img {
-    width: 800px;
+    width: 1300px;
 }
 .manual-navigation {
     position: absolute;
-    width: 800px;
-    margin-top: -40px;
+    width: 80%;
+    margin-top: 65px;
     display: flex;
     justify-content: center;
 }
@@ -395,8 +522,8 @@ h5 {
 }
 .navigation-auto {
     position: absolute;
-    width: 800px;
-    margin-top: 360px;
+    width: 80%;
+    margin-top: 465px;
     display: flex;
     justify-content: center;
 }
@@ -458,97 +585,85 @@ h5 {
     color: #fff;
 }
 
-.backA {
-    background: fixed;
-    margin: 5rem 5rem;
-    padding: 30px 0 10vw 0;
-    border-radius: 15px;
-}
-
 /* Timeline */
 
-.Socorro {
-    background: #10002b;
-    margin: auto 20rem;
-    padding: 30px;
-    border-radius: 10px;
-}
 .cd-container {
-    width: 90%;
-    max-width: 1150px;
-    margin: 0 auto;
-    padding: 0 10%;
-    border-radius: 10px;
-    
-  }
-  .cd-container::after {
+    margin: 0;
+    padding: 0;
+    background-image: url(../image/Abstop.jpg);
+    height: 115vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 15px;
+}
+.cd-container::after {
     content: '';
     display: table;
     clear: both;
-  }
-  
-  
-  /* -------------------------------- 
-  
-  Main components 
-  
-  -------------------------------- */
-  
-  
-  #cd-timeline {
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+
+#cd-timeline {
     position: relative;
     padding: 2em 0;
     margin-top: 2em;
     margin-bottom: 2em;
-  }
-  #cd-timeline::before {
+}
+#cd-timeline::before {
     content: '';
     position: absolute;
     top: 0;
     left: 25px;
-    height: 100%;
+    height: 90%;
     width: 4px;
     background: #9d4edd;
-  }
-  @media only screen and (min-width: 1170px) {
+}
+@media only screen and (min-width: 1170px) {
     #cd-timeline {
-      margin-top: 3em;
-      margin-bottom: 3em;
+        margin-top: 3em;
+        margin-bottom: 3em;
     }
     #cd-timeline::before {
-      left: 50%;
-      margin-left: -2px;
+        left: 50%;
+        margin-left: -2px;
     }
-  }
-  
-  .cd-timeline-block {
+}
+
+.cd-timeline-block {
     position: relative;
     margin: 2em 0;
-  }
-  .cd-timeline-block:after {
+}
+.cd-timeline-block:after {
     content: "";
     display: table;
     clear: both;
-  }
-  .cd-timeline-block:first-child {
+}
+.cd-timeline-block:first-child {
     margin-top: 0;
-  }
-  .cd-timeline-block:last-child {
+}
+.cd-timeline-block:last-child {
     margin-bottom: 0;
-  }
-  @media only screen and (min-width: 1170px) {
+}
+@media only screen and (min-width: 1170px) {
     .cd-timeline-block {
-      margin: 4em 0;
+        margin: 4em 0;
     }
     .cd-timeline-block:first-child {
-      margin-top: 0;
+        margin-top: 0;
     }
     .cd-timeline-block:last-child {
-      margin-bottom: 0;
+        margin-bottom: 0;
     }
-  }
-  
-  .cd-timeline-img {
+}
+
+.cd-timeline-img {
     position: absolute;
     top: 8px;
     left: 12px;
@@ -556,74 +671,44 @@ h5 {
     height: 30px;
     border-radius: 50%;
     box-shadow: 0 0 0 4px #7E57C2, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
-  }
-  .cd-timeline-img {
+}
+.cd-timeline-img {
     background: #673AB7;
-  }
-  @media only screen and (min-width: 1170px) {
-    .cd-timeline-img {
-      width: 30px;
-      height: 30px;
-      left: 50%;
-      margin-left: -15px;
-      margin-top: 15px;
-      /* Force Hardware Acceleration in WebKit */
-      -webkit-transform: translateZ(0);
-      -webkit-backface-visibility: hidden;
-    }
-  }
-  
-  .cd-timeline-content {
+}
+
+.cd-timeline-content {
     position: relative;
     margin-left: 60px;
     margin-right: 30px;
-    background: linear-gradient(to right, #10002b, #7b42dd);
+    background: linear-gradient(to right, #070011, #7b42dd 100%);
     border-radius: 8px;
     padding: 1em;
-    }
+}
 
-    .content-skills {
-      font-size: 12px;
-      padding:0;
-      margin-bottom: 0;
-      display:flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      li {
-        background: #40484D;
-        border-radius: 2px;
-        display: inline-block;
-        padding: 2px 10px;
-        color: rgba(255,255,255,0.7);
-        margin: 10px 2px;
-        text-align: center;
-        flex-grow: 1;
-      }
-    }
-  .cd-timeline-content:after {
+.cd-timeline-content:after {
     content: "";
     display: table;
     clear: both;
-  }
-  .cd-timeline-content h2 {
+}
+.cd-timeline-content h2 {
     color: rgba(255,255,255,.9);
-    margin-top:0;
+    margin-top: 0;
     margin-bottom: 5px;
-  }
-  .cd-timeline-content p, .cd-timeline-content .cd-date {
+}
+.cd-timeline-content p, .cd-timeline-content .cd-date {
     color: rgba(255,255,255,.7);
     font-size: 13px;
     font-size: 0.8125rem;
-  }
-  .cd-timeline-content .cd-date {
+}
+.cd-timeline-content .cd-date {
     display: inline-block;
-  }
-  .cd-timeline-content p {
+}
+.cd-timeline-content p {
     margin: 1em 0;
     line-height: 1.6;
-  }
-  
-  .cd-timeline-content::before {
+}
+
+.cd-timeline-content::before {
     content: '';
     position: absolute;
     top: 16px;
@@ -631,5 +716,85 @@ h5 {
     height: 0;
     width: 0;
     border: 7px solid transparent;
-    border-right: 7px solid #10002b;
-  }
+    border-right: 7px solid #070011;
+}
+.containerT{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url(../image/topdms.png) no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.form_box {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #10002b, #9d4edd);
+    border-radius: 8px;
+    width: 700px;
+    padding: 0.8rem;
+    margin: 15rem;
+
+}
+
+.form_box .title{
+    padding: 24px 32px;
+    font-size: 24px;
+    border-bottom: thin solid #ccc;
+}
+
+
+.form_box form{
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 32px;
+}
+
+.form_box input,
+.form_box textarea{
+    width: calc(50% - 8px);
+    height: 48px;
+    border-radius: 8px;
+    border: thin solid #999;
+    padding-left: 16px;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.form_box input:first-child{
+    margin-right: 16px;
+}
+
+.form_box input[name=subject]{
+    width: 100%;
+}
+
+.form_box textarea{
+    width: 100%;
+    height: 180px;
+    padding: 16px;
+}
+
+.form_box button{
+    display: block;
+    border: none;
+    outline: none;
+    width: 180px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #7b2cbf;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.form_box button:hover{
+    background-color: #3c096c;
+    transition: 1s ease;
+}
